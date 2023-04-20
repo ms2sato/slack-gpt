@@ -4,6 +4,17 @@ SlackショートカットもしくはメンションからGPT4のAPIを呼び�
 
 ## Deploy
 
+Slackチャットのデプロイの基本はこちら参照（ https://api.slack.com/lang/ja-jp/hello-world-bolt ）。
+
+### basic
+
+1. app manifestをSlackにDeployする。(manifest.json)その際に、example.comとなっている箇所はURLを書き換えてください。
+2. 以下の環境変数を設定してください
+  - OPENAI_API_KEY
+  - SLACK_BOT_TOKEN
+  - SLACK_SIGNING_SECRET
+
+### kube
 1. app manifestをSlackにDeployする。(manifest.json)その際に、example.comとなっている箇所はURLを書き換えてください。
 2. アプリをk8sなどで実行する。exampleディレクトリにサンプルマニフェストがあります。ingressはよしなにやってください。
 3. secretの登録
